@@ -1,0 +1,48 @@
+﻿body {
+    background-color:white;   
+}
+
+.foolsButton{
+    width: 5px;
+    height: 5px;
+    font-size: 1px
+}
+.button1{
+    width: 125px;
+    height: 75px;
+    font-family: 'Bradley Hand ITC' ;
+    border: ridge;
+    font-size: 30px;
+}
+.button2{
+    width: 77px;
+    height: 27px;
+    font-family: 'Bradley Hand ITC';
+    font-size: 20px;
+}
+
+.button:hover {
+    color: black;
+     
+}
+button:hover .normal {
+    display: none;
+}
+button:hover .hover{
+    display: inline;
+}
+
+button .hover {
+    display: none;
+}
+
+.column {
+    float: left;
+    width: 50%;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}

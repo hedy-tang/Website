@@ -1,0 +1,169 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title> 404 Not Found</title>
+    <link rel="stylesheet"
+          href="style.css">
+</head>
+
+<body>
+    <script>
+        var hsNotFools = document.getElementById("notFools")
+        hsNotFools.style.display = "none"
+    </script>
+    <!--april fools :)-->
+    <button class ="foolsButton" onclick="hsaprilfools()">.</button>
+    <script>
+        function hsaprilfools() {
+            var hsfools = document.getElementById("foolsText")
+            var hsNotFools = document.getElementById("notFools")
+            if (hsfools.style.display === "none") {
+                hsfools.style.display = "block";
+                hsNotFools.style.display = "none"
+            } else {
+                hsfools.style.display = "none";
+                hsNotFools.style.display = "block"
+            }
+        }
+    </script>
+    <div id="foolsText">
+        <h1>Not Found</h1>
+        <p>The requested URL was not found on this server.</p>
+        <p>Additionally, a 404 Not Found error was encountered while trying to use an ErrorDocument to handle the request.</p>
+        </div>
+        <div id="notFools">
+            <div class="row">
+                <div class="column">
+                </div>
+                <!--joke-->
+                <button onclick="hideshowjoke()">hide/show thingy</button>
+
+
+                <div id="myDIV">
+                    <span style="font-family:'Bradley Hand ITC'">
+                        <span style="font-size:xx-large;display:block">
+                            <strong> Hello!</strong>
+                            <br>
+                            <em id="demo1"><strong>DON'T CLICK THE BUTTON!!!</strong></em>
+                            <br>
+                            <strong id="warning"></strong>
+                            <br>
+                            <button class="button1" onclick="function1()">
+                                <span class="normal"><strong>CLICK ME!</strong></span>
+                                <span class="hover"><strong>PLEASE</strong></span>
+                            </button>
+                        </span>
+
+                    </span>
+                    <p id="demo"></p>
+                </div>
+            </div>
+        
+
+        <br>
+
+        <img id="vimg" hidden src="img\whatever.jpg" />
+        <!--prime number test-->
+
+        <div class="column">
+            <span style="font-family:'Bradley Hand ITC'">prime number test:</span>
+            <br>
+            <input id="number" name="number" value="10">
+            <button class="button2" onclick="seeifprime()">submit</button>
+            <br>
+            <span style="font-family:'Bradley Hand ITC'">
+                <!--by the way guys, the technological singularity has come. i failed a prime-number worksheet and this thing completed it in about 0 seconds.-->
+                <a href="https://scratch.mit.edu/projects/386461247/fullscreen/">Or just click this link to go to my project on Scratch!</a>
+            </span>
+        </div>
+        <script>
+            //add virus
+            var s = "virus";
+            var viruse = 0;
+            function function1() {
+                if (viruse < Math.floor((Math.random() * 100) + 10)) {
+                    viruse++;
+                    if (viruse > 1) { s = "viruses" }
+                    document.getElementById("demo").innerHTML = "Your computer has " + viruse + " " + s + " :(";
+                    alert("You have clicked the button. A virus is now entering your computer. Also, great job! You got yourself " + viruse + " " + s + "!");
+                    //document.getElementById("vimg").removeAttribute("hidden");
+                    document.getElementById("warning").innerHTML = " I'm serious. Seriously... >:(";
+                }
+                else {
+                    alert("Your computer has been broken by too many viruses.")
+
+                }
+            }
+            //prime number test
+            function seeifprime() {
+                var prime = "processing";
+                var inputnumber = document.getElementById("number").value;
+                var letters = /^[0-9]+$/;
+                if (inputnumber.match(letters)) {
+                    inputnumber = inputnumber.replace(/[a-z]/ig, '');
+                    document.getElementById("number").value = inputnumber;
+                    if (inputnumber == 2) {
+                        prime = " is prime"
+                    }
+                    else {
+                        if (inputnumber % 2 == 0) {
+                            prime = " is not prime"
+                            var n = 2;
+                        }
+                        else {
+                            var sqrt = Math.round(Math.sqrt(inputnumber));
+                            n = 3;
+                            if (sqrt % 2 == 0) {
+                                sqrt--
+                            }
+
+                            while ((sqrt >= n) && (prime != " is not prime")) {
+                                if (inputnumber % n == 0) {
+                                    prime = " is not prime"
+                                }
+                                else {
+                                    n = n + 2;
+                                }
+
+                            }
+                        }
+                        if (prime == "processing") {
+                            prime = " is prime"
+                        }
+                    }
+                    if (prime == " is not prime") {
+                        var n2 = (inputnumber / n);
+                        alert(inputnumber + prime + " because it is divisible by " + n + " and " + n2 + ".");
+                    }
+                    else {
+                        alert(inputnumber + prime);
+                    }
+                }
+                else {
+                    alert("you found the secret! :D ")
+                    function secret() {
+                        //put something here ig. maybe use a hide/show thingy and a quiz.
+                    }
+                }
+
+
+            }
+
+
+            function hideshowjoke() {
+                var hsjoke = document.getElementById("myDIV");
+                if (hsjoke.style.display === "none") {
+                    hsjoke.style.display = "block";
+                } else {
+                    hsjoke.style.display = "none";
+                }
+            }
+        </script>
+    </div>
+    <!--<canvas id="myCanvas" width="1" height="1" style="border:1px solid #d3d3d3"></canvas>-->
+    <!--this is a comment-->
+</body>
+    </html>
+
