@@ -3,20 +3,37 @@
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="utf-8" />
-    <title> 404 Not Found</title>
+    <title>Hedy is Awesome</title>
     <link rel="stylesheet"
           href="style.css">
 </head>
 
-<body>
+<body onload="hsFoolsLoading()">
     <script>
-        var hsNotFools = document.getElementById("notFools")
-        hsNotFools.style.display = "none"
+        function hsFoolsLoading() {
+            var d = new Date();
+            var hsNotFools = document.getElementById("notFools");
+            var hsfools = document.getElementById("foolsText");
+            var foolsOnly = document.getElementById("foolsOnly");
+            if (d.getMonth() == "3" && d.getDate() == "1") {
+                hsNotFools.style.display = "none";
+                foolsOnly.style.display = "block";
+                newPageTitle = '404 Not Found';
+                document.title = newPageTitle;
+            }
+            else {
+                hsfools.style.display = "none";
+                hsNotFools.style.display = "block";
+                foolsOnly.style.display = "none";
+            }
+        }
     </script>
     <!--april fools :)-->
-    <button class ="foolsButton" onclick="hsaprilfools()">.</button>
+    <div id="foolsOnly">
+        <button class="foolsButton" onclick="hsAprilFools()">.</button>
+    </div>
     <script>
-        function hsaprilfools() {
+        function hsAprilFools() {
             var hsfools = document.getElementById("foolsText")
             var hsNotFools = document.getElementById("notFools")
             if (hsfools.style.display === "none") {
@@ -143,8 +160,10 @@
                 }
                 else {
                     alert("you found the secret! :D ")
-                    function secret() {
-                        //put something here ig. maybe use a hide/show thingy and a quiz.
+
+                    //secret the heck you're doing
+                    function sf() {
+                        
                     }
                 }
 
